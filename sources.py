@@ -8,6 +8,9 @@ def read_maze_from_file():
     with open('maze.txt', 'r', encoding='utf-8') as f:
         maze = [wrap(row, 1) for row in f if row != '\n']
 
+    if len(set(len(row) for row in maze)) != 1:
+        raise ValueError('All rows must have the same length')
+
     return maze
 
 
@@ -41,9 +44,9 @@ def heuristic(a, b):
 
 
 def find_min_way(lab, start, goal):
-    lab1 = deepcopy(lab)
 
-    if not check_permeability(lab1, (0, 0)):
+    if lab[start[0]][start[1]] == '#' \
+            or not check_permeability(deepcopy(lab), (0, 0)):
         return -1
 
     frontier = PriorityQueue()

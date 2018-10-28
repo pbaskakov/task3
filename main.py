@@ -6,7 +6,7 @@ if __name__ == '__main__':
     min_way_length = find_min_way(maze, (0, 0), (4, 5))
 
     if min_way_length != -1:
-        print(f'Длина минимального пути: {min_way_length}.')
+        print(f'Minimum path length: {min_way_length}')
         beautiful_output(maze)
     else:
-        print('-1: Лабиринт непроходим')
+        print('-1: The labyrinth is impassable')
