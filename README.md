@@ -6,6 +6,6 @@ Finder of the shortest way in the labyrinth
 ______________________________________________
 
 ## Description of files:
-* sources.py : contains fuctions for checking permeability, finding the shortest path and beautiful output of the maze;
+* sources.py : contains fuctions for checking permeability, finding the shortest path with the adaptation of A* method and beautiful output of the maze;
 * maze.txt : contains the original labyrinth;
 * main.py : executable file.
